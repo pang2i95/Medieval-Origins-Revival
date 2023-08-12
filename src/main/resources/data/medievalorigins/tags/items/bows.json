@@ -2,7 +2,9 @@
     "replace": false,
     "values": [
         {"id":"minecraft:bow","required": false},
-        {"id":"#c:bows","required": false}
+        {"id":"#c:bows","required": false},
+        {"id":"#fabric:bows","required": false},
+        {"id":"dragonloot:dragon_bow","required": false}
     ]
   }
   

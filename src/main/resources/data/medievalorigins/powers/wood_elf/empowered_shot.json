@@ -24,14 +24,23 @@
             "resource": "medievalorigins:wood_elf/empowered_shot_hold_time",
             "change": 1
         },
-        "condition": {
-            "type": "origins:using_item",
-            "item_condition": {
-                "type": "origins:ingredient",
-                "ingredient": {
-                    "tag": "medievalorigins:bows"
+        "item_condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:ingredient",
+                    "ingredient": {
+                        "tag": "medievalorigins:bows"
+                    }
+                },
+                {
+                    "type": "origins:ingredient",
+                    "ingredient": {
+                        "item": "minecraft:crossbow"
+                    },
+                    "inverted": true
                 }
-            }
+            ]
         }
     },
     "fully_charged": {
@@ -108,6 +117,10 @@
                                             {
                                                 "type": "origins:execute_command",
                                                 "command": "execute store result entity @s Air short 1 run time query gametime"
+                                            },
+                                            {
+                                                "type": "origins:execute_command",
+                                                "command": "kill @e[tag = empowered.shot_direction]"
                                             }
                                         ]
                                     }
@@ -176,10 +189,22 @@
                 {
                     "type": "origins:using_item",
                     "item_condition": {
-                        "type": "origins:ingredient",
-                        "ingredient": {
-                            "tag": "medievalorigins:bows"
-                        }
+                        "type": "origins:and",
+                        "conditions": [
+                            {
+                                "type": "origins:ingredient",
+                                "ingredient": {
+                                    "tag": "medievalorigins:bows"
+                                }
+                            },
+                            {
+                                "type": "origins:ingredient",
+                                "ingredient": {
+                                    "item": "minecraft:crossbow"
+                                },
+                                "inverted": true
+                            }
+                        ]
                     },
                     "inverted": true
                 }

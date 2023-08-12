@@ -21,9 +21,9 @@
 						"show_icon": true
 					},
 					{
-						"effect": "zenith:sundering",
-						"duration": 300,
-						"amplifier": 1,
+						"effect": "minecraft:poison",
+						"duration": 100,
+						"amplifier": 0,
 						"is_ambient": false,
 						"show_particles": false,
 						"show_icon": true
@@ -31,7 +31,7 @@
 					{
 						"effect": "minecraft:slowness",
 						"duration": 300,
-						"amplifier": 1,
+						"amplifier": 2,
 						"is_ambient": false,
 						"show_particles": false,
 						"show_icon": true
@@ -40,7 +40,7 @@
 			},
 			{
 				"type": "origins:area_of_effect",
-				"radius": 32,
+				"radius": 12,
 				"bientity_action": {
 					"type": "origins:target_action",
 					"action": {
@@ -84,7 +84,7 @@
 								{
 									"type": "origins:distance",
 									"comparison": "<=",
-									"compare_to": 8
+									"compare_to": 12
 								}
 							]
 						}
