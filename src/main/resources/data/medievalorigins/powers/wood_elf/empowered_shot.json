@@ -93,6 +93,10 @@
                                                 "command": "execute positioned 0.0 0 0.0 run summon minecraft:area_effect_cloud ^ ^ ^9 {Tags: [\"empowered_shot.direction\"]}"
                                             },
                                             {
+                                                "type": "origins:execute_command",
+                                                "command": "kill @e[tag = empowered.shot_direction]"
+                                            },
+                                            {
                                                 "type": "origins:play_sound",
                                                 "sound": "minecraft:block.respawn_anchor.deplete",
                                                 "volume": 1,
