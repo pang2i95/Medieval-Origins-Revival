@@ -108,6 +108,10 @@
                                             {
                                                 "type": "origins:execute_command",
                                                 "command": "execute store result entity @s Air short 1 run time query gametime"
+                                            },
+                                            {
+                                                "type": "origins:execute_command",
+                                                "command": "kill @e[tag = empowered.shot_direction]"
                                             }
                                         ]
                                     }
