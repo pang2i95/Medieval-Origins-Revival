@@ -144,7 +144,7 @@
   "power.medievalorigins.wood_elf/eagle_eyed.description": "Wood Elves' enhanced perception allows them to keep track of an enemy for a while after hitting them, even when they aren't in view.",
 
   "power.medievalorigins.wood_elf/elegant.name": "Elegant",
-  "power.medievalorigins.wood_elf/elegant.description": "Due to their slender nature, Wood Elves can not wear armor heavier than chainmail (This can be prevented with an enchantment), and have less health.",
+  "power.medievalorigins.wood_elf/elegant.description": "Due to their slender nature, Wood Elves can not wear armor heavier than iron (This can be prevented with an enchantment), and have less health.",
 
   "power.medievalorigins.wood_elf/steward.name": "Steward",
   "power.medievalorigins.wood_elf/steward.description": "Wood elves live off the forest and in harmony with it. They can not digest meat.",
@@ -213,7 +213,7 @@
   "power.medievalorigins.moon_elf/stealth.description": "In the dark, Moon Elves can turn invisible by sneaking, and move a short distance while stealthed. When attacking from stealth, their first attack deals bonus damage and ends the invisibility.",
 
   "power.medievalorigins.moon_elf/elegant.name": "Elegant",
-  "power.medievalorigins.moon_elf/elegant.description": "Due to their slim builds, Moon Elves can not wear armor heavier than chainmail. This can be prevented with an enchantment.",
+  "power.medievalorigins.moon_elf/elegant.description": "Due to their slim builds, Moon Elves can not wear armor heavier than iron. This can be prevented with an enchantment.",
 
   "power.medievalorigins.moon_elf/ethereal.name": "Ethereal",
   "power.medievalorigins.moon_elf/ethereal.description": "Moon elves are thin and even slightly translucent, and their skin has a peculiar blue hue.",
