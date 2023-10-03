@@ -17,7 +17,7 @@
 					{
 						"type": "apoli:ingredient",
 						"ingredient": {
-							"tag": "c:axes"
+							"tag": "medievalorigins:axes"
 						}
 					}
 				]
@@ -41,7 +41,7 @@
 					{
 						"type": "apoli:ingredient",
 						"ingredient": {
-							"tag": "c:axes"
+							"tag": "medievalorigins:axes"
 						}
 					}
 				]
@@ -53,7 +53,7 @@
 		"item_condition": {
 			"type": "apoli:ingredient",
 			"ingredient": {
-				"tag": "c:axes"
+				"tag": "medievalorigins:axes"
 			}
 		},
 		"text": [
