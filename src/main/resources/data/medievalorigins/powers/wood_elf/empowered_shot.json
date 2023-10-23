@@ -90,7 +90,7 @@
                                             },
                                             {
                                                 "type": "origins:execute_command",
-                                                "command": "kill @e[tag = empowered.shot_direction]"
+                                                "command": "kill @e[tag = empowered_shot.direction]"
                                             },
                                             {
                                                 "type": "origins:execute_command",
