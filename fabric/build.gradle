@@ -31,20 +31,10 @@ loom {
     }
 }
 repositories {
-    maven {
-        name = "Greenhouse"
-        url = 'https://maven.greenhouseteam.dev/releases/'
-    }
-    maven {
-        name = "Jamie's White Shirt"
-        url "https://maven.jamieswhiteshirt.com/libs-release"
+    maven { url = "https://maven.jamieswhiteshirt.com/libs-release"
         content {
             includeGroup "com.jamieswhiteshirt"
         }
-    }
-    maven {
-        name = 'ParchmentMC'
-        url = 'https://maven.parchmentmc.org'
     }
     maven { url = "https://maven.nucleoid.xyz/" }
     maven { url = 'https://maven.blamejared.com' }
@@ -52,10 +42,9 @@ repositories {
     maven { url = "https://jitpack.io" }
     maven { url = "https://maven.parchmentmc.org" }
     maven { url = "https://maven.terraformersmc.com/" }
-    maven { url = 'https://maven.merchantpug.net/releases/' }
     maven { url = 'https://maven.ladysnake.org/releases' }
-    maven {
-        url = 'https://maven.cafeteria.dev'
+    maven { url = 'https://maven.ladysnake.org/snapshots' }
+    maven { url = 'https://maven.cafeteria.dev'
         content {
             includeGroup 'net.adriantodt.fabricmc'
         }
@@ -79,6 +68,13 @@ repositories {
     maven { url "https://cursemaven.com" }
     maven { url = "https://nexus.resourcefulbees.com/repository/maven-public/" }
     maven { url = "https://jm.gserv.me/repository/maven-public/" }
+    maven {
+        url "https://masa.dy.fi/maven"
+    }
+    maven {
+        name = "QuiltMC"
+        url = "https://maven.quiltmc.org/repository/release"
+    }
 
     mavenCentral()
     mavenLocal()
@@ -93,19 +89,20 @@ dependencies {
     }
     //Fabric
     modImplementation "net.fabricmc:fabric-loader:${fabric_loader_version}"
-    modImplementation "net.fabricmc.fabric-api:fabric-api:${fabric_version}"
+    modImplementation "net.fabricmc.fabric-api:fabric-api:${fabric_api_version}"
 
 
-    modImplementation("com.github.apace100:calio:${calio_fabric_version}")
-    modImplementation("com.github.apace100:apoli:${apoli_fabric_version}")
-    modImplementation "com.github.apace100:origins-fabric:${origins_fabric_version}"
-    include(modImplementation("net.merchantpug:Apugli:${apugli_version}+${minecraft_version}-fabric"))
+    //modImplementation("com.github.apace100:calio:${calio_fabric_version}")
+    modImplementation("io.github.apace100:apoli:${apoli_fabric_version}")
+    modImplementation "io.github.apace100:origins-fabric:${origins_fabric_version}"
+
     implementation(annotationProcessor("io.github.llamalad7:mixinextras-fabric:${mixin_extras_version}"))
     implementation(annotationProcessor("net.fabricmc:sponge-mixin:0.13.3+mixin.0.8.5"))
 
     implementation project(path: ":Common", configuration: "namedElements")
-    modImplementation "com.terraformersmc:modmenu:${modmenu_version}"
-    modImplementation include("com.github.apace100:autotag-api:${autotag_version}")
+    modImplementation "com.terraformersmc:modmenu:${mod_menu_version}"
+
+    /*
     modImplementation include("maven.modrinth:projectile-damage-attribute:${project.projectile_damage}-fabric")
     modImplementation include("com.jamieswhiteshirt:reach-entity-attributes:${project.rea_version}")
 
@@ -147,6 +144,7 @@ dependencies {
 
     modImplementation "io.github.ladysnake:PlayerAbilityLib:${pal_version}"
 
+    */
 }
 
 processResources {
@@ -209,8 +207,6 @@ modrinth {
     //debugMode = true
     dependencies {
         required.project("origins")
-        required.project("pehkui")
-        required.project("spell-engine")
     }
 }
 
@@ -225,6 +221,4 @@ task publishCurseForge(type: net.darkhax.curseforgegradle.TaskPublishCurseForge)
     mainFile.addModLoader("fabric")
     mainFile.displayName = "Fabric-${rootProject.version}+${minecraft_version}"
     mainFile.addRequirement("origins")
-    mainFile.addRequirement("pehkui")
-    mainFile.addRequirement("spell-engine")
 }

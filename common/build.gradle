@@ -25,6 +25,7 @@ repositories {
         name = 'ParchmentMC'
         url = 'https://maven.parchmentmc.org'
     }
+    maven { url = 'https://maven.ladysnake.org/snapshots' }
     mavenCentral()
     mavenLocal()
 }
@@ -43,11 +44,11 @@ dependencies {
         officialMojangMappings()
         parchment("org.parchmentmc.data:parchment-${minecraft_version}:${parchment_version}@zip")
     }
+
     // Origins
-    modCompileOnly("com.github.apace100:calio:${calio_fabric_version}") { transitive false }
-    modCompileOnly("com.github.apace100:apoli:${apoli_fabric_version}") { transitive false }
-    modCompileOnly("com.github.apace100:origins-fabric:${origins_fabric_version}") { transitive false }
-    modCompileOnly("net.merchantpug:Apugli:${apugli_version}+${minecraft_version}-fabric") { transitive false }
+    //modCompileOnly("com.github.apace100:calio:${calio_fabric_version}") { transitive false }
+    modCompileOnly("io.github.apace100:apoli:${apoli_fabric_version}") { transitive false }
+    modCompileOnly("io.github.apace100:origins-fabric:${origins_fabric_version}") { transitive false }
     compileOnly(annotationProcessor("io.github.llamalad7:mixinextras-common:${mixin_extras_version}"))
     compileOnly group:'org.spongepowered', name:'mixin', version:'0.8.5'
     compileOnly group: 'org.ow2.asm', name: 'asm-tree', version: '9.4'
